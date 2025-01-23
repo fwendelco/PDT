@@ -26,8 +26,12 @@ st.markdown(
 
 st.markdown(
     """
-    ### Aqui, você pode visualizar de forma clara e interativa as porcentagens das aplicações da avaliação socioemocional por escola, organizadas por série.
-    """
+    <div style='text-align: justify; font-size: 18px; line-height: 1.6;'>
+        Aqui você pode visualizar, de forma clara e interativa, as porcentagens 
+        das aplicações da avaliação socioemocional por escola para cada série.
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 # Criar lista suspensa para selecionar escola
