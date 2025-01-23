@@ -15,7 +15,7 @@ st.image("cr.jpeg")
 # Configuração do título da aplicação
 st.markdown(
     """
-    <div style='text-align: center; font-size: 24px; font-weight: bold;'>
+    <div style='text-align: center; font-size: 30px; font-weight: bold;'>
         Relatório Socioemocional por Escola
     </div>
     """,
