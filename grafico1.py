@@ -72,6 +72,6 @@ st.pyplot(fig)
 st.write("Dados detalhados:")
 st.dataframe(dados_escola)
 
-st.image("pdt1.jpeg")
+st.image("pdt1.png")
 
 
