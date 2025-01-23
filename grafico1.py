@@ -10,9 +10,14 @@ from matplotlib import pyplot as plt
 arquivo_planilha = "relatorio_escolas_2025-01-22_17-45-41.xlsx"
 df = pd.read_excel(arquivo_planilha)
 
-st.image("cr.jpeg", use_column_width=True)
+st.image("cr.jpeg")
 # Configuração do título da aplicação
-st.title("Relatório Socioemocional por Escola - CREDE 01")
+st.markdown(
+    "<h1 style='text-align: center;'>Relatório Socioemocional por Escola</h1>",
+    unsafe_allow_html=True,
+)
+#st.title("Relatório Socioemocional por Escola - CREDE 01")
+
 st.markdown(
     """
     ### Aqui, você pode visualizar de forma clara e interativa as porcentagens das aplicações da avaliação socioemocional por escola, organizadas por série.
