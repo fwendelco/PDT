@@ -11,11 +11,17 @@ arquivo_planilha = "relatorio_escolas_2025-01-22_17-45-41.xlsx"
 df = pd.read_excel(arquivo_planilha)
 
 st.image("cr.jpeg")
+
 # Configuração do título da aplicação
 st.markdown(
-    "<h1 style='text-align: center;'>Relatório Socioemocional por Escola</h1>",
+    """
+    <div style='text-align: center; font-size: 24px; font-weight: bold;'>
+        Relatório Socioemocional por Escola
+    </div>
+    """,
     unsafe_allow_html=True,
 )
+
 #st.title("Relatório Socioemocional por Escola - CREDE 01")
 
 st.markdown(
