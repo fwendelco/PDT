@@ -10,6 +10,7 @@ from matplotlib import pyplot as plt
 arquivo_planilha = "relatorio_escolas_2025-01-22_17-45-41.xlsx"
 df = pd.read_excel(arquivo_planilha)
 
+st.image("cr.jpg", use_column_width=True)
 # Configuração do título da aplicação
 st.title("Relatório Socioemocional por Escola - CREDE 01")
 st.markdown(
