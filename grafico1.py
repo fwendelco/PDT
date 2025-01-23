@@ -1,18 +1,32 @@
+import os
+os.system("pip install matplotlib")
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+import matplotlib
+from matplotlib import pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Carregar os dados da planilha gerada
-arquivo_planilha = "relatorio_escolas_2025-01-22_10-30-13.xlsx"
+arquivo_planilha = "relatorio_escolas_2025-01-22_17-45-41.xlsx"
 df = pd.read_excel(arquivo_planilha)
 
 # Configuração do título da aplicação
-st.title("Relatório Socioemocional por Escola")
-st.write("Selecione uma escola para visualizar os dados.")
+st.title("Relatório Socioemocional por Escola - CREDE 01")
+st.markdown(
+    """
+    ### Aqui, você pode visualizar de forma clara e interativa as porcentagens das aplicações da avaliação socioemocional por escola, organizadas por série.
+    """
+)
 
 # Criar lista suspensa para selecionar escola
-escolas = df["NOME DA ESCOLA"].unique()
-escola_selecionada = st.selectbox("Escolha a escola", escolas)
+escola_selecionada = st.selectbox(
+    "Pesquise ou selecione uma escola:",
+    options=df["NOME DA ESCOLA"],
+    format_func=lambda x: f"{x}"  # O `format_func` mantém o texto original
+)
+
+#escolas = df["NOME DA ESCOLA"].unique()
+#escola_selecionada = st.selectbox("Escolha a escola", escolas)
 
 # Filtrar os dados da escola selecionada
 dados_escola = df[df["NOME DA ESCOLA"] == escola_selecionada]
@@ -29,8 +43,8 @@ fig, ax = plt.subplots()
 ax.bar(series, valores, color=["blue", "orange", "green"])
 ax.set_title(f"Porcentagens para {escola_selecionada}")
 ax.set_ylabel("Porcentagem")
-ax.set_ylim(0, 100)
-
+ax.set_ylim(0, 130)
+ax.set_yticks([]) #retira os números do eixo y
 # Adicionar rótulos acima das barras
 for i, v in enumerate(valores):
     ax.text(i, v + 1, f"{v:.1f}%", ha="center")
@@ -41,4 +55,5 @@ st.pyplot(fig)
 # Exibir tabela de dados da escola (opcional)
 st.write("Dados detalhados:")
 st.dataframe(dados_escola)
+
 
