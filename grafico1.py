@@ -16,7 +16,7 @@ st.image("cr.jpeg")
 st.markdown(
     """
     <div style='text-align: center; font-size: 38px; font-weight: bold;'>
-        Relatório Socioemocional por Escola
+        Relatório da Avaliação Socioemocional por Escola
     </div>
     """,
     unsafe_allow_html=True,
