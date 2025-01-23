@@ -71,14 +71,7 @@ st.pyplot(fig)
 # Exibir tabela de dados da escola (opcional)
 st.write("Dados detalhados:")
 st.dataframe(dados_escola)
-st.markdown(
-    """
-    <div style="text-align: center;">
-        <img src="pdt1.png" style="width: 300px;">
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-#st.image("pdt1.png",  width=300)
 
+#st.image("pdt1.png",  width=300)
+st.image("pdt1.png", width=300, use_column_width=True)
 
