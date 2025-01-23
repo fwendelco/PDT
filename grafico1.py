@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 arquivo_planilha = "relatorio_escolas_2025-01-22_17-45-41.xlsx"
 df = pd.read_excel(arquivo_planilha)
 
-st.image("cr.jpeg", width=500)
+st.image("cr.jpeg")
 
 # Configuração do título da aplicação
 st.markdown(
